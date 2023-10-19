@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  @apply font-nunito;
+}
+
+h1{
+  @apply text-[48px]
+}
+
+h2 {
+  @apply font-bold text-2xl leading-[48px] text-[#34373A];
+}
+
+.extended-content-container {
+  @apply flex justify-center w-[500%] -ml-[200%];
+}
+
+.extended-content {
+  @apply container px-4 w-full max-w-[980px];
+}
+

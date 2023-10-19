@@ -1,0 +1,6356 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "routeLp",
+        "type": "ContentType",
+        "createdAt": "2023-08-24T18:17:12.188Z",
+        "updatedAt": "2023-09-21T21:26:00.949Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2023-09-21T21:26:00.949Z",
+        "firstPublishedAt": "2023-08-24T18:17:12.792Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 25,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "url",
+      "name": "Route LP",
+      "description": "",
+      "fields": [
+        {
+          "id": "url",
+          "name": "URL",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "resultsByLocale",
+          "name": "Results by Locale",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": true
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "histogramSwitch",
+          "name": "Histogram Switch",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "histogram",
+          "name": "Histogram",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "histogram"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "destinationImage",
+          "name": "Destination Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "destinationWeather",
+          "name": "Destination Weather",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cheapestFlights",
+          "name": "Cheapest Flights",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "cheapestFlights"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "allRoutesFromOrigin",
+          "name": "All Routes From Origin",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "allRoutesFromOrigin"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "allRoutesFromOrigin",
+        "type": "ContentType",
+        "createdAt": "2023-09-04T00:31:34.371Z",
+        "updatedAt": "2023-10-02T21:21:44.326Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 25,
+        "publishedAt": "2023-10-02T21:21:44.326Z",
+        "firstPublishedAt": "2023-09-04T00:31:34.845Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 13,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "All Routes From Origin",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "originCity",
+          "name": "Origin City",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "originCode",
+          "name": "Origin Code",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 3
+              }
+            },
+            {
+              "regexp": {
+                "pattern": "[A-Z]{3}",
+                "flags": null
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "destination",
+          "name": "Destination",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "translations",
+          "name": "Translations",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "translationAllRoutesFromOrigin"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "cheapestFlights",
+        "type": "ContentType",
+        "createdAt": "2023-09-04T00:32:06.790Z",
+        "updatedAt": "2023-10-02T21:11:00.722Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-10-02T21:11:00.722Z",
+        "firstPublishedAt": "2023-09-04T00:32:07.231Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Cheapest Flights",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "translations",
+          "name": "Translations",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "translationCheapestFlights"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "landingPageOd",
+        "type": "ContentType",
+        "createdAt": "2023-09-25T23:01:03.390Z",
+        "updatedAt": "2023-10-02T21:45:06.009Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2023-10-02T21:45:06.009Z",
+        "firstPublishedAt": "2023-09-25T23:01:04.048Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69J9p6yQN9sFQFqs3m7Byv"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 25,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "slug",
+      "name": "Landing Page OD",
+      "description": "",
+      "fields": [
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primaryColor",
+          "name": "Primary Color",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(?:#|0x)(?:[a-f0-9]{3}|[a-f0-9]{6})\\b|(?:rgb|hsl)a?\\([^\\)]*\\)",
+                "flags": null
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "features",
+          "name": "Features",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "TheFooter",
+                  "TheHeader",
+                  "histogramSection",
+                  "destinationImageSection",
+                  "weatherSection",
+                  "cheapestFlights",
+                  "allRoutesFromOrigin"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "weatherWidget",
+          "name": "Weather Widget",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": true
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "showHistogram",
+          "name": "Show Histogram",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": true
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "TheHeader",
+        "type": "ContentType",
+        "createdAt": "2023-09-25T23:02:07.163Z",
+        "updatedAt": "2023-10-02T15:54:48.432Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-10-02T15:54:48.432Z",
+        "firstPublishedAt": "2023-09-25T23:02:07.547Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69J9p6yQN9sFQFqs3m7Byv"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Header",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "bgImage",
+          "name": "Backgound Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "translations",
+          "name": "Translations",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "translationHeader"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "TheFooter",
+        "type": "ContentType",
+        "createdAt": "2023-09-25T23:02:38.917Z",
+        "updatedAt": "2023-09-28T17:11:12.640Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-09-28T17:11:12.640Z",
+        "firstPublishedAt": "2023-09-25T23:02:39.470Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69J9p6yQN9sFQFqs3m7Byv"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Footer",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "socialMedia",
+          "name": "Social Media",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "socialMedia"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "markup",
+          "name": "Markup",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "code"
+              ],
+              "message": "Only code marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "embedded-asset-block",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink"
+              ],
+              "message": "Only asset, link to Url, link to entry, and link to asset nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "companyInfo",
+          "name": "Company Info",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-asset-block",
+                "table",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, asset, table, and link to Url nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "socialMedia",
+        "type": "ContentType",
+        "createdAt": "2023-09-28T17:05:22.017Z",
+        "updatedAt": "2023-09-28T17:05:22.505Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-09-28T17:05:22.505Z",
+        "firstPublishedAt": "2023-09-28T17:05:22.505Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Social Media",
+      "description": "Social media information",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "url",
+          "name": "URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "translationHeader",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T15:54:11.241Z",
+        "updatedAt": "2023-10-02T21:40:40.727Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-10-02T21:40:40.727Z",
+        "firstPublishedAt": "2023-10-02T15:54:11.844Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "headerText",
+      "name": "Translation Header",
+      "description": "",
+      "fields": [
+        {
+          "id": "headerText",
+          "name": "Header Text",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Flights from {origin.name} to {destination.name} ({origin.iata}-{destination.iata})",
+            "es-AR": "Vuelos desde {origin.name} a {destination.name} ({origin.iata}-{destination.iata})"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heCode",
+          "name": "Promotion Code",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Promotion code",
+            "es-AR": "Código promocional"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heAdt",
+          "name": "Adult",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Adult",
+            "es-AR": "Adulto"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heYth",
+          "name": "Youth",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Youth",
+            "es-AR": "Joven"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heChd",
+          "name": "Child",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Child",
+            "es-AR": "Niño"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heIftLp",
+          "name": "Infant On Lap",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Infant (On Lap)",
+            "es-AR": "Bebé (En regazo)"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heIftSeat",
+          "name": "Infant In Seat",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Infant (In Seat)",
+            "es-AR": "Bebé (En asiento)"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "searchButton",
+          "name": "Search Button",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Search",
+            "es-AR": "Buscar"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ow",
+          "name": "One Way",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "One way",
+            "es-AR": "Solo ida"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "rt",
+          "name": "Round Trip",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Round trip",
+            "es-AR": "Ida y vuelta"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ps",
+          "name": "Passenger Single",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "passenger",
+            "es-AR": "pasajero"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "pp",
+          "name": "Passenger Plural",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "passengers",
+            "es-AR": "pasajeros"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "from",
+          "name": "From",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "From",
+            "es-AR": "Desde"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "to",
+          "name": "To",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "To",
+            "es-AR": "Hasta"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "dd",
+          "name": "Departure Date",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Departure date",
+            "es-AR": "Fecha de salida"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "rd",
+          "name": "Return Date",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Return date",
+            "es-AR": "Fecha regreso"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heDone",
+          "name": "Done Button",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Done",
+            "es-AR": "Listo"
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "translationHistogram",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T17:40:56.836Z",
+        "updatedAt": "2023-10-02T17:40:57.399Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T17:40:57.399Z",
+        "firstPublishedAt": "2023-10-02T17:40:57.399Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "hTitle",
+      "name": "Translation Histogram",
+      "description": "",
+      "fields": [
+        {
+          "id": "hTitle",
+          "name": "Histogram Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Flights from {origin.name} to {destination.name}",
+            "es-AR": "Vuelos desde {origin.name} a {destination.name}"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "hFrom",
+          "name": "From - Translation",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "From",
+            "es-AR": "Desde"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "hTo",
+          "name": "To - Translation",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "To",
+            "es-AR": "Hasta"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "how",
+          "name": "One Way - Translation",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "One way",
+            "es-AR": "Solo ida"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "hrt",
+          "name": "Round Trip - Translation",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Round trip",
+            "es-AR": "Ida y vuelta"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "hm",
+          "name": "Message - Translation",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Presented fares may vary regarding final prices",
+            "es-AR": "Los precios presentados podrian variar del precio final"
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "destinationImageSection",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T17:48:23.809Z",
+        "updatedAt": "2023-10-02T17:48:24.295Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T17:48:24.295Z",
+        "firstPublishedAt": "2023-10-02T17:48:24.295Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Destination Image Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "destinationImage",
+          "name": "Destination Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "histogramSection",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T17:49:36.992Z",
+        "updatedAt": "2023-10-02T17:49:37.456Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T17:49:37.456Z",
+        "firstPublishedAt": "2023-10-02T17:49:37.456Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Histogram Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "translations",
+          "name": "Translations",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "translationHistogram"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "weatherSection",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T18:50:39.403Z",
+        "updatedAt": "2023-10-02T18:53:37.624Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-02T18:53:37.624Z",
+        "firstPublishedAt": "2023-10-02T18:50:39.895Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Weather Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "translations",
+          "name": "Translations",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "translationWeather"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "translationWeather",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T18:53:13.692Z",
+        "updatedAt": "2023-10-02T18:53:14.465Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T18:53:14.465Z",
+        "firstPublishedAt": "2023-10-02T18:53:14.465Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "wtitle",
+      "name": "Translation Weather",
+      "description": "",
+      "fields": [
+        {
+          "id": "wtitle",
+          "name": "Weather Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Weather in {origin.name}",
+            "es-AR": "Clima en {origin.name}"
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "translationCheapestFlights",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T21:10:30.611Z",
+        "updatedAt": "2023-10-02T21:10:31.406Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T21:10:31.406Z",
+        "firstPublishedAt": "2023-10-02T21:10:31.406Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "cpTitle",
+      "name": "Translation Cheapest Flights",
+      "description": "",
+      "fields": [
+        {
+          "id": "cpTitle",
+          "name": "Cheapest Flights Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Cheapest Flights between {origin.name} and {destination.name}",
+            "es-AR": "Vuelos más baratos entre {origin.name} y {destination.name}"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "chFrom",
+          "name": "From",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "From",
+            "es-AR": "Desde"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cfTo",
+          "name": "To",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "To",
+            "es-AR": "Hasta"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cfMaxBudg",
+          "name": "Maximum Budget",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Maximum budget",
+            "es-AR": "Presupuesto máximo"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cpType",
+          "name": "Table Flight Type header",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Flight type",
+            "es-AR": "Tipo de vuelo"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cfDate",
+          "name": "Table Date header",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Date",
+            "es-AR": "Fecha"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cfCost",
+          "name": "Table Cost header",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Cost",
+            "es-AR": "Precio"
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "translationAllRoutesFromOrigin",
+        "type": "ContentType",
+        "createdAt": "2023-10-02T21:20:21.127Z",
+        "updatedAt": "2023-10-02T21:20:21.850Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T21:20:21.850Z",
+        "firstPublishedAt": "2023-10-02T21:20:21.850Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "displayField": "arTitle",
+      "name": "Translation All Routes From Origin",
+      "description": "",
+      "fields": [
+        {
+          "id": "arTitle",
+          "name": "All Routes Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "All routes from {origin.name}",
+            "es-AR": "Todas las rutas desde {origin.name}"
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 50,
+        "createdAt": "2023-08-24T18:17:12.869Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-09-21T21:26:01.887Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "routeLp",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "url",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "resultsByLocale",
+          "settings": {
+            "helpText": "Si el país definido por la localización no coincide con el país de origen, este setting define si la url se publica.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "histogramSwitch",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "histogram",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "destinationImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "destinationWeather",
+          "settings": {
+            "helpText": "It defines if the weather widget will be displayed or not.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cheapestFlights",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "allRoutesFromOrigin",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 26,
+        "createdAt": "2023-09-04T00:31:34.942Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T21:21:45.245Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "allRoutesFromOrigin",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "originCity",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "originCode",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "destination",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "translations",
+          "settings": {
+            "helpText": "Translations for All Routes From Origin section",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2023-09-04T00:32:07.359Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T21:11:01.910Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "cheapestFlights",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "translations",
+          "settings": {
+            "helpText": "Translation section",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 50,
+        "createdAt": "2023-09-25T23:01:04.194Z",
+        "createdBy": {
+          "sys": {
+            "id": "69J9p6yQN9sFQFqs3m7Byv",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T21:45:07.058Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "landingPageOd",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryColor",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "features",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "weatherWidget",
+          "settings": {
+            "helpText": "This field defines if the weather widget will be displayed for the destination.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "showHistogram",
+          "settings": {
+            "helpText": "This field defines whether the histogram will be displayed to the user o not.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-09-25T23:02:07.664Z",
+        "createdBy": {
+          "sys": {
+            "id": "69J9p6yQN9sFQFqs3m7Byv",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T15:54:49.304Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "TheHeader",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "logo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "bgImage",
+          "settings": {
+            "helpText": "Background image for the Header",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "translations",
+          "settings": {
+            "helpText": "Translations for The Header",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-09-25T23:02:39.579Z",
+        "createdBy": {
+          "sys": {
+            "id": "69J9p6yQN9sFQFqs3m7Byv",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-09-28T17:11:13.810Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "TheFooter",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "socialMedia",
+          "settings": {
+            "helpText": "Social media references",
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "markup",
+          "settings": {
+            "helpText": "Special markup section"
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "companyInfo",
+          "settings": {
+            "helpText": "Branding information."
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-09-28T17:05:22.899Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-09-28T17:05:23.700Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "socialMedia",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Social media name"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "url",
+          "settings": {
+            "helpText": "Social media URL"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icon",
+          "settings": {
+            "helpText": "Social media image",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-10-02T15:54:11.971Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T21:40:41.774Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "translationHeader",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "headerText",
+          "settings": {
+            "helpText": "Translation field for the Header text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heCode",
+          "settings": {
+            "helpText": "Translation field for \"Promotion code\" text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heAdt",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heYth",
+          "settings": {
+            "helpText": "Traslation field for \"Youth\" dropdown option text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heChd",
+          "settings": {
+            "helpText": "Traslation field for \"Child\" dropdown option text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heIftLp",
+          "settings": {
+            "helpText": "Traslation field for \"Infant (On Lap)\" dropdown option text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heIftSeat",
+          "settings": {
+            "helpText": "Traslation field for \"Infant (In seat)\" dropdown option text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "searchButton",
+          "settings": {
+            "helpText": "Translation field for the search button text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ow",
+          "settings": {
+            "helpText": "Translation field for \"One way\" text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "rt",
+          "settings": {
+            "helpText": "Translation field for Round trip text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ps",
+          "settings": {
+            "helpText": "Translation field for \"Passenger\" text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "pp",
+          "settings": {
+            "helpText": "Translation field for \"Passengers\" text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "from",
+          "settings": {
+            "helpText": "Translation field for \"From\" text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "to",
+          "settings": {
+            "helpText": "Translation field for \"To\" text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "dd",
+          "settings": {
+            "helpText": "Translation field for \"Departure date\" text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "rd",
+          "settings": {
+            "helpText": "Translation field for \"Return date\" text"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heDone",
+          "settings": {
+            "helpText": "Translation field for \"Done\" button text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-10-02T17:40:57.535Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T17:40:58.707Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "translationHistogram",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hTitle",
+          "settings": {
+            "helpText": "Translation field for \"Flights from...\" text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hFrom",
+          "settings": {
+            "helpText": "Translation field for \"From\" text in the Histogram section"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hTo",
+          "settings": {
+            "helpText": "Translation field for \"To\" text in Histogram section."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "how",
+          "settings": {
+            "helpText": "Translation field for \"One way\" text in Histogram section"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hrt",
+          "settings": {
+            "helpText": "Translation field for \"Round trip\" text in Histogram section."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hm",
+          "settings": {
+            "helpText": "Translation field for \"Presented fares...\" text in Histogram section"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-10-02T17:48:24.394Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T17:48:25.024Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "destinationImageSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "destinationImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-10-02T17:49:37.565Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T17:49:38.137Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "histogramSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Histogram component title"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "translations",
+          "settings": {
+            "helpText": "Translations for Histogram component",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-10-02T18:50:39.996Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T18:53:38.534Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "weatherSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "translations",
+          "settings": {
+            "helpText": "Translation section",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-10-02T18:53:14.561Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T18:53:15.414Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "translationWeather",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "wtitle",
+          "settings": {
+            "helpText": "Translation field for \"Weather in\" text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-10-02T21:10:31.547Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T21:10:32.607Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "translationCheapestFlights",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "cpTitle",
+          "settings": {
+            "helpText": "Translation field for \"Cheapeast flights\" title in Cheapeast Flights section"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "chFrom",
+          "settings": {
+            "helpText": "Translation field for \"From\" text in Cheapest Flight section."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cfTo",
+          "settings": {
+            "helpText": "Translation field for \"To\" text in Cheapeast Flights section"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cfMaxBudg",
+          "settings": {
+            "helpText": "Translation field for \"Maximum budget\" text in Cheapeast Flights section"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cpType",
+          "settings": {
+            "helpText": "Translation field for \"Flight type\" header title."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cfDate",
+          "settings": {
+            "helpText": "Translation field for \"Date\" header text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cfCost",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1cnce9vl3pug",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-10-02T21:20:21.955Z",
+        "createdBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-10-02T21:20:23.041Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "translationAllRoutesFromOrigin",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "arTitle",
+          "settings": {
+            "helpText": "Translation field for \"All routes from...\" text."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "5eWX87qSMGH5v5sFDi3qQC",
+        "type": "Entry",
+        "createdAt": "2023-09-26T16:04:10.835Z",
+        "updatedAt": "2023-10-02T22:05:40.995Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2023-10-02T22:05:40.995Z",
+        "firstPublishedAt": "2023-09-26T16:10:30.727Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "allRoutesFromOrigin"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Medellin"
+        },
+        "originCity": {
+          "en-US": "Medellin"
+        },
+        "originCode": {
+          "en-US": "MDE"
+        },
+        "destination": {
+          "en-US": [
+            "Cali (CAL)",
+            "Cartagena (CAR)",
+            "Bogotá (BOG)"
+          ]
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2GwaZ5cYP5zBD7td0rHlZZ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "6WukWqDAqkGUUolWoLIg5O",
+        "type": "Entry",
+        "createdAt": "2023-09-26T19:14:46.611Z",
+        "updatedAt": "2023-10-02T22:07:10.721Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-10-02T22:07:10.721Z",
+        "firstPublishedAt": "2023-10-02T22:03:54.297Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "allRoutesFromOrigin"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Buenos Aires"
+        },
+        "originCity": {
+          "en-US": "Buenos Aires"
+        },
+        "originCode": {
+          "en-US": "BUE"
+        },
+        "destination": {
+          "en-US": [
+            "Cali (CAL)",
+            "Miami (MIA)",
+            "Medellin (MDE)",
+            "Bogotá (BOG)"
+          ]
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2GwaZ5cYP5zBD7td0rHlZZ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "3hBpuJsekPriPpTVsjp3OF",
+        "type": "Entry",
+        "createdAt": "2023-09-26T23:34:46.454Z",
+        "updatedAt": "2023-10-04T14:20:28.674Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 30,
+        "publishedAt": "2023-10-04T14:20:28.674Z",
+        "firstPublishedAt": "2023-09-26T23:40:42.523Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 31,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "landingPageOd"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "flights-medellin-to-buenos-aires",
+          "es-AR": "vuelos-medellin-a-buenos-aires"
+        },
+        "primaryColor": {
+          "en-US": "#000"
+        },
+        "features": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7oMRAYE5wqnyhfO6AXVDNP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "629tgPhRi2HaWY3bsHLH3o"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "11nWympM6sQxMVxml7aW7o"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2SwpOP4S2aGugiznVs6t3z"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1r1ElWyP6nLC1Z7SWw7ITG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5eWX87qSMGH5v5sFDi3qQC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1DzQp9d1x3SIkDuZQl8WSi"
+              }
+            }
+          ]
+        },
+        "weatherWidget": {
+          "en-US": true
+        },
+        "showHistogram": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "6QurhQru2SAHphwpjKFW4w",
+        "type": "Entry",
+        "createdAt": "2023-09-27T19:27:56.402Z",
+        "updatedAt": "2023-10-02T22:00:40.363Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2023-10-02T22:00:40.363Z",
+        "firstPublishedAt": "2023-09-27T19:28:36.375Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "allRoutesFromOrigin"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Miami"
+        },
+        "originCity": {
+          "en-US": "Miami"
+        },
+        "originCode": {
+          "en-US": "MIA"
+        },
+        "destination": {
+          "en-US": [
+            "CALI (CAL)",
+            "Medellin (MDE)",
+            "Cartagena (CAR)"
+          ]
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2GwaZ5cYP5zBD7td0rHlZZ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "1DzQp9d1x3SIkDuZQl8WSi",
+        "type": "Entry",
+        "createdAt": "2023-09-28T17:11:31.756Z",
+        "updatedAt": "2023-10-02T17:45:00.181Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 27,
+        "publishedAt": "2023-10-02T17:45:00.181Z",
+        "firstPublishedAt": "2023-09-28T17:39:18.489Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 28,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "TheFooter"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Footer - My Airline "
+        },
+        "socialMedia": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "S1ln7dpbhZto5qe2VRKvM"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2DFg9dmqHQK6ktThNHoG2Q"
+              }
+            }
+          ]
+        },
+        "markup": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "<script>",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "  var myVar = 1;\n  var result = myVar + 2;\n  alert(result);",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "<",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "/script>",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "companyInfo": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "My Airline - C2023",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "S1ln7dpbhZto5qe2VRKvM",
+        "type": "Entry",
+        "createdAt": "2023-09-28T17:12:51.351Z",
+        "updatedAt": "2023-09-28T17:14:31.259Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2023-09-28T17:14:31.259Z",
+        "firstPublishedAt": "2023-09-28T17:14:31.259Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialMedia"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Facebook"
+        },
+        "url": {
+          "en-US": "http://www.facebook.com/my-airline"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5t9wuKq3VRWX0woujDBPF5"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "2DFg9dmqHQK6ktThNHoG2Q",
+        "type": "Entry",
+        "createdAt": "2023-09-28T17:14:39.414Z",
+        "updatedAt": "2023-09-28T17:15:40.182Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-09-28T17:15:40.182Z",
+        "firstPublishedAt": "2023-09-28T17:15:40.182Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialMedia"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Instagram"
+        },
+        "url": {
+          "en-US": "www.instagram.com/my-airline"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3GEIC5udbTC8acsVexaBDb"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "7oMRAYE5wqnyhfO6AXVDNP",
+        "type": "Entry",
+        "createdAt": "2023-09-28T17:50:24.533Z",
+        "updatedAt": "2023-10-05T19:15:36.863Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-10-05T19:15:36.863Z",
+        "firstPublishedAt": "2023-09-28T18:10:16.946Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "TheHeader"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Header - My Airline"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1VWxrIUtWPCzH74iJcrYWw"
+            }
+          }
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2sEAJSSdcE2a8u7PfcR99U"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "1dUVu3RVZoqnnHaPfTeJAt",
+        "type": "Entry",
+        "createdAt": "2023-09-28T18:10:32.539Z",
+        "updatedAt": "2023-10-04T14:07:58.855Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 25,
+        "publishedAt": "2023-10-04T14:07:58.855Z",
+        "firstPublishedAt": "2023-10-02T21:53:51.461Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "landingPageOd"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "flights-cartagena-to-medellin",
+          "es-AR": "vuelos-cartagena-a-medellin"
+        },
+        "primaryColor": {
+          "en-US": "#000"
+        },
+        "features": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7oMRAYE5wqnyhfO6AXVDNP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "629tgPhRi2HaWY3bsHLH3o"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2SwpOP4S2aGugiznVs6t3z"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1r1ElWyP6nLC1Z7SWw7ITG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4zOBgpHHptYG6jtLD5nEGt"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4ajg41u1wftkNrLLAX8zk3"
+              }
+            }
+          ]
+        },
+        "weatherWidget": {
+          "en-US": true
+        },
+        "showHistogram": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "1s1R1RiK9R4Gt7XDgaJeDZ",
+        "type": "Entry",
+        "createdAt": "2023-09-29T01:16:13.254Z",
+        "updatedAt": "2023-10-04T14:26:16.202Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 62,
+        "publishedAt": "2023-10-04T14:26:16.202Z",
+        "firstPublishedAt": "2023-09-29T01:27:45.534Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 63,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "landingPageOd"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "flights-cartagena-to-cordoba",
+          "es-AR": "vuelos-cartagena-a-cordoba"
+        },
+        "primaryColor": {
+          "en-US": "#000"
+        },
+        "features": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7oMRAYE5wqnyhfO6AXVDNP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "629tgPhRi2HaWY3bsHLH3o"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2sjfn0hPh6JJH8nGrXycj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2SwpOP4S2aGugiznVs6t3z"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1r1ElWyP6nLC1Z7SWw7ITG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "vSQMdnHukZwUlj6qoiWwm"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1DzQp9d1x3SIkDuZQl8WSi"
+              }
+            }
+          ]
+        },
+        "weatherWidget": {
+          "en-US": true
+        },
+        "showHistogram": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "7qrD2ct2X8sOJTFJ4pYFBR",
+        "type": "Entry",
+        "createdAt": "2023-10-02T17:43:56.957Z",
+        "updatedAt": "2023-10-02T17:44:03.771Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T17:44:03.771Z",
+        "firstPublishedAt": "2023-10-02T17:44:03.771Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "translationHistogram"
+          }
+        }
+      },
+      "fields": {
+        "hTitle": {
+          "en-US": "Flights from {origin.name} to {destination.name}",
+          "es-AR": "Vuelos desde {origin.name} a {destination.name}"
+        },
+        "hFrom": {
+          "en-US": "From",
+          "es-AR": "Desde"
+        },
+        "hTo": {
+          "en-US": "To",
+          "es-AR": "Hasta"
+        },
+        "how": {
+          "en-US": "One way",
+          "es-AR": "Solo ida"
+        },
+        "hrt": {
+          "en-US": "Round trip",
+          "es-AR": "Ida y vuelta"
+        },
+        "hm": {
+          "en-US": "Presented fares may vary regarding final prices",
+          "es-AR": "Los precios presentados podrian variar del precio final"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "629tgPhRi2HaWY3bsHLH3o",
+        "type": "Entry",
+        "createdAt": "2023-10-02T18:00:31.809Z",
+        "updatedAt": "2023-10-02T18:00:49.697Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-02T18:00:49.697Z",
+        "firstPublishedAt": "2023-10-02T18:00:49.697Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "histogramSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Histogram - My Airline"
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7qrD2ct2X8sOJTFJ4pYFBR"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "2oRRYpFEWKlzbzmKlg6zCf",
+        "type": "Entry",
+        "createdAt": "2023-10-02T18:01:06.487Z",
+        "updatedAt": "2023-10-02T22:10:48.653Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2023-10-02T22:10:48.653Z",
+        "firstPublishedAt": "2023-10-02T18:01:27.261Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "destinationImageSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "BOG"
+        },
+        "destinationImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ipx8PsnT9dMBPzokZ6bEm"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "2SwpOP4S2aGugiznVs6t3z",
+        "type": "Entry",
+        "createdAt": "2023-10-02T18:54:25.008Z",
+        "updatedAt": "2023-10-02T18:54:55.867Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-10-02T18:54:55.867Z",
+        "firstPublishedAt": "2023-10-02T18:54:55.867Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "weatherSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Weather section - My Airline"
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7yovn4U9nOLhK4ihEJd7ns"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "7yovn4U9nOLhK4ihEJd7ns",
+        "type": "Entry",
+        "createdAt": "2023-10-02T18:54:44.700Z",
+        "updatedAt": "2023-10-05T15:23:17.296Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-05T15:23:17.296Z",
+        "firstPublishedAt": "2023-10-02T18:54:49.402Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "translationWeather"
+          }
+        }
+      },
+      "fields": {
+        "wtitle": {
+          "en-US": "Weather in {destination.name}",
+          "es-AR": "Clima en {destination.name}"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "1r1ElWyP6nLC1Z7SWw7ITG",
+        "type": "Entry",
+        "createdAt": "2023-10-02T21:11:59.492Z",
+        "updatedAt": "2023-10-02T21:12:33.554Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-02T21:12:33.554Z",
+        "firstPublishedAt": "2023-10-02T21:12:33.554Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cheapestFlights"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Cheapest Flights - My Airline"
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6Cj1ZX9MMfbHgucPXwkI7k"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "6Cj1ZX9MMfbHgucPXwkI7k",
+        "type": "Entry",
+        "createdAt": "2023-10-02T21:12:12.959Z",
+        "updatedAt": "2023-10-04T20:17:45.255Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-04T20:17:45.255Z",
+        "firstPublishedAt": "2023-10-02T21:12:22.204Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "translationCheapestFlights"
+          }
+        }
+      },
+      "fields": {
+        "cpTitle": {
+          "en-US": "Cheapest flights between {origin.name} and {destination.name}",
+          "es-AR": "Vuelos más baratos entre {origin.name} y {destination.name}"
+        },
+        "chFrom": {
+          "en-US": "From",
+          "es-AR": "Desde"
+        },
+        "cfTo": {
+          "en-US": "To",
+          "es-AR": "Hasta"
+        },
+        "cfMaxBudg": {
+          "en-US": "Maximum budget",
+          "es-AR": "Presupuesto máximo"
+        },
+        "cpType": {
+          "en-US": "Flight type",
+          "es-AR": "Tipo de vuelo"
+        },
+        "cfDate": {
+          "en-US": "Date",
+          "es-AR": "Fecha"
+        },
+        "cfCost": {
+          "en-US": "Cost",
+          "es-AR": "Precio"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "2GwaZ5cYP5zBD7td0rHlZZ",
+        "type": "Entry",
+        "createdAt": "2023-10-02T22:00:14.261Z",
+        "updatedAt": "2023-10-02T22:00:20.477Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-02T22:00:20.477Z",
+        "firstPublishedAt": "2023-10-02T22:00:20.477Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "translationAllRoutesFromOrigin"
+          }
+        }
+      },
+      "fields": {
+        "arTitle": {
+          "en-US": "All routes from {origin.name}",
+          "es-AR": "Todas las rutas desde {origin.name}"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "11nWympM6sQxMVxml7aW7o",
+        "type": "Entry",
+        "createdAt": "2023-10-02T22:09:56.976Z",
+        "updatedAt": "2023-10-02T22:10:23.172Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-10-02T22:10:23.172Z",
+        "firstPublishedAt": "2023-10-02T22:10:23.172Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "destinationImageSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "BUE"
+        },
+        "destinationImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1VWxrIUtWPCzH74iJcrYWw"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "2y2c0RXsmoW4Dco33GvjTj",
+        "type": "Entry",
+        "createdAt": "2023-10-02T22:11:05.214Z",
+        "updatedAt": "2023-10-02T22:11:25.987Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-02T22:11:25.987Z",
+        "firstPublishedAt": "2023-10-02T22:11:25.987Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "destinationImageSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "MDE"
+        },
+        "destinationImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1C2Ed548ZUrSbWsJ6IsRji"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "271K9Uu3ww4K8OtcvZFYju",
+        "type": "Entry",
+        "createdAt": "2023-10-02T22:11:40.155Z",
+        "updatedAt": "2023-10-02T22:16:43.360Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-10-02T22:16:43.360Z",
+        "firstPublishedAt": "2023-10-02T22:16:43.360Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "destinationImageSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "CTG"
+        },
+        "destinationImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1C2Ed548ZUrSbWsJ6IsRji"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "b761nOT6Y4Pz0fnKXffxn",
+        "type": "Entry",
+        "createdAt": "2023-10-02T22:17:53.201Z",
+        "updatedAt": "2023-10-02T22:18:47.982Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-02T22:18:47.982Z",
+        "firstPublishedAt": "2023-10-02T22:18:47.982Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "destinationImageSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "MIA"
+        },
+        "destinationImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5e4cQT6SPNP7lfBONHVNqf"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "4ajg41u1wftkNrLLAX8zk3",
+        "type": "Entry",
+        "createdAt": "2023-10-04T14:04:28.189Z",
+        "updatedAt": "2023-10-04T14:05:28.412Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-10-04T14:05:28.412Z",
+        "firstPublishedAt": "2023-10-04T14:05:28.412Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "TheFooter"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Footer - My Airline"
+        },
+        "socialMedia": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2DFg9dmqHQK6ktThNHoG2Q"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "S1ln7dpbhZto5qe2VRKvM"
+              }
+            }
+          ]
+        },
+        "companyInfo": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "My Airline 2023",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "4zOBgpHHptYG6jtLD5nEGt",
+        "type": "Entry",
+        "createdAt": "2023-10-04T14:06:33.741Z",
+        "updatedAt": "2023-10-04T14:07:48.916Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2023-10-04T14:07:48.916Z",
+        "firstPublishedAt": "2023-10-04T14:07:48.916Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "allRoutesFromOrigin"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Cartagena"
+        },
+        "originCity": {
+          "en-US": "Cartagena"
+        },
+        "originCode": {
+          "en-US": "CTG"
+        },
+        "destination": {
+          "en-US": [
+            "Medellin (MDE)",
+            "Bogotá (BOG)",
+            "Miami (MIA)",
+            "Buenos Aires (BUE)"
+          ]
+        },
+        "translations": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2GwaZ5cYP5zBD7td0rHlZZ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "vSQMdnHukZwUlj6qoiWwm",
+        "type": "Entry",
+        "createdAt": "2023-10-04T14:22:48.574Z",
+        "updatedAt": "2023-10-04T14:23:39.688Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-10-04T14:23:39.688Z",
+        "firstPublishedAt": "2023-10-04T14:23:39.688Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "allRoutesFromOrigin"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Cartagena"
+        },
+        "originCity": {
+          "en-US": "Cartagena"
+        },
+        "originCode": {
+          "en-US": "CTG"
+        },
+        "destination": {
+          "en-US": [
+            "Cordoba (CBA)",
+            "Buenos Aires (BUE)",
+            "Medellin (MDE)"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "2sjfn0hPh6JJH8nGrXycj",
+        "type": "Entry",
+        "createdAt": "2023-10-04T14:25:34.600Z",
+        "updatedAt": "2023-10-04T14:25:47.140Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-10-04T14:25:47.140Z",
+        "firstPublishedAt": "2023-10-04T14:25:47.140Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "destinationImageSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "COR"
+        },
+        "destinationImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ipx8PsnT9dMBPzokZ6bEm"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "1Islca6hoJwnDZlBYxEB8s",
+        "type": "Entry",
+        "createdAt": "2023-10-04T20:15:19.782Z",
+        "updatedAt": "2023-10-05T19:38:15.652Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2023-10-04T20:17:11.884Z",
+        "firstPublishedAt": "2023-10-04T20:17:11.884Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "landingPageOd"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "flights-buenos-aires-to-medellin",
+          "es-AR": "es-ar/vuelos-buenos-aires-a-medellin"
+        },
+        "primaryColor": {
+          "en-US": "#000"
+        },
+        "features": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7oMRAYE5wqnyhfO6AXVDNP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "629tgPhRi2HaWY3bsHLH3o"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2y2c0RXsmoW4Dco33GvjTj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2SwpOP4S2aGugiznVs6t3z"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1r1ElWyP6nLC1Z7SWw7ITG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6WukWqDAqkGUUolWoLIg5O"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1DzQp9d1x3SIkDuZQl8WSi"
+              }
+            }
+          ]
+        },
+        "weatherWidget": {
+          "en-US": true
+        },
+        "showHistogram": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "2sEAJSSdcE2a8u7PfcR99U",
+        "type": "Entry",
+        "createdAt": "2023-10-05T19:14:22.292Z",
+        "updatedAt": "2023-10-05T19:14:29.830Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-10-05T19:14:29.830Z",
+        "firstPublishedAt": "2023-10-05T19:14:29.830Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "translationHeader"
+          }
+        }
+      },
+      "fields": {
+        "headerText": {
+          "en-US": "Flights from {origin.name} to {destination.name} ({origin.iata}-{destination.iata})",
+          "es-AR": "Vuelos desde {origin.name} a {destination.name} ({origin.iata}-{destination.iata})"
+        },
+        "heCode": {
+          "en-US": "Promotion code",
+          "es-AR": "Código promocional"
+        },
+        "heAdt": {
+          "en-US": "Adult",
+          "es-AR": "Adulto"
+        },
+        "heYth": {
+          "en-US": "Youth",
+          "es-AR": "Joven"
+        },
+        "heChd": {
+          "en-US": "Child",
+          "es-AR": "Niño"
+        },
+        "heIftLp": {
+          "en-US": "Infant (On Lap)",
+          "es-AR": "Bebé (En regazo)"
+        },
+        "heIftSeat": {
+          "en-US": "Infant (In Seat)",
+          "es-AR": "Bebé (En asiento)"
+        },
+        "searchButton": {
+          "en-US": "Search",
+          "es-AR": "Buscar"
+        },
+        "ow": {
+          "en-US": "One way",
+          "es-AR": "Solo ida"
+        },
+        "rt": {
+          "en-US": "Round trip",
+          "es-AR": "Ida y vuelta"
+        },
+        "ps": {
+          "en-US": "passenger",
+          "es-AR": "pasajero"
+        },
+        "pp": {
+          "en-US": "passengers",
+          "es-AR": "pasajeros"
+        },
+        "from": {
+          "en-US": "From",
+          "es-AR": "Desde"
+        },
+        "to": {
+          "en-US": "To",
+          "es-AR": "Hasta"
+        },
+        "dd": {
+          "en-US": "Departure date",
+          "es-AR": "Fecha de salida"
+        },
+        "rd": {
+          "en-US": "Return date",
+          "es-AR": "Fecha regreso"
+        },
+        "heDone": {
+          "en-US": "Done",
+          "es-AR": "Listo"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "7D5PY1C4ZZaTYIYHhsAL1v",
+        "type": "Asset",
+        "createdAt": "2023-08-31T20:41:33.578Z",
+        "updatedAt": "2023-08-31T20:42:12.609Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-08-31T20:42:12.609Z",
+        "firstPublishedAt": "2023-08-31T20:42:12.609Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "COL_MED"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/7D5PY1C4ZZaTYIYHhsAL1v/9125cfc7b3b0fc975266e50ece45e928/imagen.jpg",
+            "details": {
+              "size": 148036,
+              "image": {
+                "width": 1080,
+                "height": 1323
+              }
+            },
+            "fileName": "imagen.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "1C2Ed548ZUrSbWsJ6IsRji",
+        "type": "Asset",
+        "createdAt": "2023-08-31T21:33:01.456Z",
+        "updatedAt": "2023-08-31T21:33:35.756Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-08-31T21:33:35.756Z",
+        "firstPublishedAt": "2023-08-31T21:33:35.756Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "COL-BOG"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/1C2Ed548ZUrSbWsJ6IsRji/3a5326884fd1e096e17eee61ba91589d/images2.jpeg",
+            "details": {
+              "size": 5728,
+              "image": {
+                "width": 275,
+                "height": 183
+              }
+            },
+            "fileName": "images2.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "7M2fiXqy1Y5zQX4FbEnm3l",
+        "type": "Asset",
+        "createdAt": "2023-09-26T22:52:06.578Z",
+        "updatedAt": "2023-09-26T22:53:18.957Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-09-26T22:53:18.957Z",
+        "firstPublishedAt": "2023-09-26T22:52:47.859Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "BUE_EZE"
+        },
+        "description": {
+          "en-US": "Image from Buenos Aires"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/7M2fiXqy1Y5zQX4FbEnm3l/376b4715b85cf6a922b92d515713e2d0/Fuente_Pesadas_de_Burgos.jpg",
+            "details": {
+              "size": 2789080,
+              "image": {
+                "width": 3264,
+                "height": 2448
+              }
+            },
+            "fileName": "Fuente_Pesadas_de_Burgos.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "5t9wuKq3VRWX0woujDBPF5",
+        "type": "Asset",
+        "createdAt": "2023-09-28T17:13:43.146Z",
+        "updatedAt": "2023-09-28T17:14:23.302Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-09-28T17:14:23.302Z",
+        "firstPublishedAt": "2023-09-28T17:14:23.302Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Facebook"
+        },
+        "description": {
+          "en-US": "Facebook logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/5t9wuKq3VRWX0woujDBPF5/c1de428fd7bc412b601c1fb001a74014/informazioni.svg",
+            "details": {
+              "size": 333,
+              "image": {
+                "width": 18,
+                "height": 18
+              }
+            },
+            "fileName": "informazioni.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "3GEIC5udbTC8acsVexaBDb",
+        "type": "Asset",
+        "createdAt": "2023-09-28T17:14:57.457Z",
+        "updatedAt": "2023-09-28T17:15:27.090Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-09-28T17:15:27.090Z",
+        "firstPublishedAt": "2023-09-28T17:15:27.090Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Instagram"
+        },
+        "description": {
+          "en-US": "Icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/3GEIC5udbTC8acsVexaBDb/4e7941058f1c0b22dd051815f4977bb9/membro.svg",
+            "details": {
+              "size": 275,
+              "image": {
+                "width": 27,
+                "height": 27
+              }
+            },
+            "fileName": "membro.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "1VWxrIUtWPCzH74iJcrYWw",
+        "type": "Asset",
+        "createdAt": "2023-09-28T17:50:36.653Z",
+        "updatedAt": "2023-09-28T18:06:06.956Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-09-28T18:06:06.956Z",
+        "firstPublishedAt": "2023-09-28T18:06:06.956Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Header - My Airline"
+        },
+        "description": {
+          "en-US": "Header My Airliene"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/1VWxrIUtWPCzH74iJcrYWw/960ff42ceb658a0a82243ed53d7b1e45/2014488_univ_lsr_xl.jpg",
+            "details": {
+              "size": 334203,
+              "image": {
+                "width": 1200,
+                "height": 600
+              }
+            },
+            "fileName": "2014488_univ_lsr_xl.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "ipx8PsnT9dMBPzokZ6bEm",
+        "type": "Asset",
+        "createdAt": "2023-09-29T01:18:30.200Z",
+        "updatedAt": "2023-09-29T01:19:16.884Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-09-29T01:19:16.884Z",
+        "firstPublishedAt": "2023-09-29T01:19:16.884Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "BUE_COR"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/ipx8PsnT9dMBPzokZ6bEm/c41028d7705a73c533d7ca75bdaecf23/cordoba.jpeg",
+            "details": {
+              "size": 11707,
+              "image": {
+                "width": 359,
+                "height": 140
+              }
+            },
+            "fileName": "cordoba.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "id": "5e4cQT6SPNP7lfBONHVNqf",
+        "type": "Asset",
+        "createdAt": "2023-10-02T22:18:16.346Z",
+        "updatedAt": "2023-10-02T22:18:40.237Z",
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-10-02T22:18:40.237Z",
+        "firstPublishedAt": "2023-10-02T22:18:40.237Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Miami"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1cnce9vl3pug/5e4cQT6SPNP7lfBONHVNqf/8d079acca1df09d7a0203c8c64503f97/miami.jpeg",
+            "details": {
+              "size": 12058,
+              "image": {
+                "width": 270,
+                "height": 187
+              }
+            },
+            "fileName": "miami.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1NKODtGCUV0J4EIBLnKhV2",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "development",
+            "uuid": "6f707fb8-7074-4685-8b46-98a9173c7189"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "createdAt": "2023-08-24T15:14:15Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedAt": "2023-08-24T15:14:15Z"
+      }
+    },
+    {
+      "name": "Spanish (Argentina)",
+      "code": "es-AR",
+      "fallbackCode": "en-US",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "6Cziwi6VZrOuMTsL0SK20E",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1cnce9vl3pug"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "development",
+            "uuid": "6f707fb8-7074-4685-8b46-98a9173c7189"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "createdAt": "2023-08-24T18:42:06Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6yQk0AQ6zHs3ZMz9bw4B9b"
+          }
+        },
+        "updatedAt": "2023-08-24T18:42:06Z"
+      }
+    }
+  ]
+}

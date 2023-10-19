@@ -1,32 +1,46 @@
 {
-  "name": "nuxt-amplify",
-  "version": "1.0.0",
+  "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "test": "jest"
-  },
-  "dependencies": {
-    "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "prepare:husky": "husky install",
+    "clean:nuxt": "nuxi cleanup",
+    "typecheck:nuxt": "nuxi typecheck",
+    "contentful:types": "node ./scripts/contentful-types.js",
+    "contentful:export": "node ./scripts/contentful-export.js",
+    "contentful:generate-types": "npm run contentful:export && npm run contentful:types"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/tailwindcss": "^5.3.3",
-    "@vue/test-utils": "^1.3.0",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^29.1.2",
-    "jest": "^29.1.2",
-    "jest-environment-jsdom": "^29.1.2",
-    "postcss": "^8.4.17",
-    "ts-jest": "^29.0.3",
-    "vue-jest": "^3.0.4"
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/node": "^18.17.1",
+    "cf-content-types-generator": "^2.12.9",
+    "contentful-cli": "^2.8.16",
+    "eslint": "^8.47.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0",
+    "nuxt": "^3.6.5",
+    "nuxt-lodash": "^2.5.0",
+    "nuxt-svgo": "^3.5.4",
+    "typescript": "^5.1.6",
+    "vue-tsc": "^1.8.8"
+  },
+  "dependencies": {
+    "@types/contentful-resolve-response": "^0.1.31",
+    "@vuepic/vue-datepicker": "^7.0.0",
+    "contentful": "^10.5.2",
+    "contentful-resolve-response": "^1.8.1",
+    "moment": "^2.29.4",
+    "zod": "^3.22.2"
   }
 }

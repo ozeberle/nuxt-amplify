@@ -1,69 +1,304 @@
-# nuxt-amplify
+# Kiusys
 
-## Build Setup
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+## Frontend Stack
+
+- Nuxt 3
+- Tailwind
+- TypeScript
+
+## Instalación
 
 ```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+npm install
+npm run postinstall
+npm run prepare:husky
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Development Build
 
-## Special Directories
+```bash
+npm run dev
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## Production Build
 
-### `assets`
+```bash
+npm run build
+```
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+Para iniciar un servidor local y visualizar el contenido del build:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```bash
+npm run preview
+```
 
-### `components`
+## Commits
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+El proyecto cuenta con [Husky](https://typicode.github.io/husky/) para correr scripts al momento de hacer commits (Git Hooks). En caso de que alguno estos arroje error, el commit se cancela. Para mantener un estándar de la forma en que se realizan los *commits*, se ha usado dos herramientas [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) y [lint-stage](https://github.com/okonet/lint-staged).
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+### Conventional Commits
 
-### `layouts`
+Al momento de realizar un commit, este script verifica que el commit message se ajuste a los estándares de [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+```bash
+<type>[optional scope]: <description>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+feat: add TheText component to support text blocks
+```
 
+Algunos posibles **types**
 
-### `pages`
+- feat
+- fix
+- test
+- refactor
+- chore
+- docs
+- build
+- style
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+### lint-stage
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+Este script evalua que el código en *stage* cumpla con ciertas condiciones. Para este proyecto, es necesario que tanto ESLint como TypeScript no arrojen ningún error/advertencia.
 
-### `plugins`
+## TypeScript
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+Para aprovechar todos los benficios del tipado y mantener un estándar alto en la calidad del código, se ha usado TypeScript.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+## Tailwind
 
-### `static`
+Todos los estilos del proyecto se manejarán con la ayuda de [Taildwind](https://tailwindcss.com/) y **PostCSS**. En los archivos **SFC** de Vue, se puede usar una sintaxis similar a las de SCCS:
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+```html
+<style scoped lang="postcss">
+    .component-name {
+        &__element {
+            @apply bg-red-400;
+        }
+    }
+</style>
+```
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+## Manejo de estilos
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+Para los estilos de cada componente se usa la metodología [BEM](https://getbem.com/) y todos irán siempre en la etiqueta `<style scoped lang="postcss"></style>`.
 
-### `store`
+Puede haber **excepciones** donde se necesiten tener estilos computados, en cuyo caso la lógica de los mismos se debe ejecutar dentro del setup.
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+```html
+<template>
+    <div class="header" :class="classes">
+        <div class="header__container">
+            The Header
+        </div>
+    </div>
+</template>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+<script setup lang="ts">
+    interface HeaderProps = {
+        isDark: boolean;
+    } 
+
+    const props = defineProps<HeaderProps>()
+
+    const classes = computed(() => ({ 'header--dark' : props.isDark }))
+</script>
+
+<style scoped lang="postcss">
+    .header {
+        @apply text-slate-900;
+
+        &__container {
+            @apply container;
+        }
+
+        &--dark {
+            @apply text-slate-200;
+        }
+    }
+</style>
+```
+
+## Content Models
+
+En Contentful, todos los content models deberían tener como ID el mismo nombre que el componente (adapter) en Vue. Ejemplo:
+
+```bash
+TheFooter.tsx => Content Model ID: TheFooter
+TheHeader.tsx => Content Model ID: TheHeader
+```
+
+## Componentes
+
+### Types
+
+Los types pueden ser generados con el siguiente comando:
+
+```bash
+npm run contentful:generate-types
+```
+Esto exportará toda el espacio de Contentful y creará los types basado en esa información. El contenido puede ser encontrado en **/contentful**
+
+Nota: Debería correrse el comando anterior cada vez que sea crea un content model o se actualiza uno.
+
+### Components
+
+Los componentes se cargan dinámicamente dependiendo de la información que envíe el gestor de contenidos [Contentful](https://www.contentful.com/).
+
+Todos los componentes que se carguen dinámicamente deben ser registrados globalmente para que Nuxt pueda reconocerlos. Por lo anterior, deben estar localizados en la carpeta:
+
+```bash
+components/global
+```
+
+Para el nombramiento, es necesario usar nombres compuestos para que no haya conflictos con los tags nativos de HTML. Para el proyecto, los componentes tendrán como prefijo "The".
+
+```bash
+TheHeaderUI.vue
+TheFooterUI.vue
+```
+
+Hay dos tipos de componentes en el proyecto: **UI Components** y **Adapters (Functional Components)**
+
+### UI Components
+
+Son los componentes que incluyen exclusivamente la UI de la feature que se esté desarrollando. Son agnosticos frente al gestor de contenido que se use.
+
+Las props deben estar correctamente tipeadas y en un archivo independiente para que el Adapter las pueda usar.
+
+Este componente nunca se debe usarse directamente por algo más que no sea el Adapter.
+
+TheFooterUI.vue:
+
+```html
+<script setup lang="ts">
+
+import type { TheFooterUIProps } from './TheFooterUIProps'
+
+defineProps<TheFooterUIProps>()
+
+</script>
+```
+
+TheFooterUIProps.ts:
+
+```ts
+export interface TheFooterUIProps {
+    title: string;
+}
+```
+
+### Adapter Component
+
+Es un componente funcional que no maneja estado alguno. Es el intermediario entre **Contentful** y la UI. Se encarga de transformar la información que recibe del gestor de contenidos en el formato definido por las props del UI Component.
+
+Las props de este componente se definen usando el autogenerador de types.
+
+```bash
+npm run contentful:generate-types
+```
+
+```ts
+import type { FunctionalComponent } from 'vue'
+
+import type { TheHeaderUIProps } from './TheHeaderUIProps'
+import { TheHeaderUI } from '#components'
+import { TypeTheHeader } from 'contentful/types'
+
+/**
+ *
+ * @param props The props object received by the content manager
+ * @returns The Vue UI component with transformed data
+ */
+const TheHeader: FunctionalComponent<TypeTheHeader<'WITHOUT_UNRESOLVABLE_LINKS', ''>> = (
+  props
+) => {
+  const dataUI: TheHeaderUIProps = {
+    src: props.fields.logo?.fields.file?.url || '',
+    alt: props.fields.title || props.fields.logo?.fields.description
+  }
+
+  return (
+    <TheHeaderUI {...dataUI} />
+  )
+}
+
+export default TheHeader
+```
+
+## SWR - Stale-while-revalidate
+
+Este patrón de diseño consiste entregar la versión en caché mientras se regenera una nueva versión en el servidor (SSR). Para ello, se establece un límite de tiempo.
+
+El flujo sería el siguiente:
+
+1. Se establece un tiempo de revalidación de 60 segundos.
+2. Nuxt genera el primer build y almacena en caché las rutas predefinidas si estas existen.
+3. Un usuario visita la ruta /ejemplo.
+4. El servidor responde con lo que haya almacenado en caché.
+5. El servidor evalua si, desde el último renderizado de /ejemplo ha pasado más de 60 segundos.
+   1. Si no ha pasado más de 60 segundos, no regenera nada y sigue enviando lo que hay en caché.
+   2. Si ha pasado más de 60 segundos, regenera la ruta /ejemplo y actualiza el caché con esta nueva versión.
+6. En todos los requests posteriores, el servidor realiza este mismo proceso (4-5).
+
+La implementación de este patrón de diseño, en herramientas como Nuxt o Next, se denomina **ISR - Incremental Static Regeneration**
+
+En el caso de Nuxt, se implementa de la siguiente manera:
+
+```ts
+export default defineNuxtConfig({
+  routeRules: {
+    // Enable stale-while-revalidate
+    '/**': { swr: 60 }
+  },
+})
+```
+
+## SSG - Static Site Generation
+
+Este enfoque se centra en generar todas las rutas durante el build del sitio web. No hay SSR, por lo que todo el contenido es estático.
+
+En Nuxt es posible hacerlo de la siguiente manera:
+
+```ts
+export default defineNuxtConfig({
+  ssr: true,
+  nitro: {
+     prerender: {
+       routes: ['/the-route']
+     }
+   }
+})
+```
+
+O usando rutas generadas dinámicamente desde un API:
+
+```ts
+export default defineNuxtConfig({
+  ssr: true,
+  hooks: {
+    async 'nitro:config' (nitroConfig) {
+      const slugs = await getRoutes()
+
+      nitroConfig.prerender?.routes?.push(...slugs)
+    }
+  }
+})
+
+const getRoutes = async () => {
+  const response = await fetch('https://api/routes')
+  const data: Array<{ createdAt: string, route: string; id: string }> = await response.json()
+  const routes = data.map(route => route.route)
+  return routes
+}
+```
+
+Posteriormente, se puede regenerar usando el comando
+
+```bash
+npm run generate
+```
+
+Es necesario tener en cuenta que no es posible regenerar solo una ruta. Este proceso regenera todas las rutas, incluso si solo una de ellas tiene información actualizada.
